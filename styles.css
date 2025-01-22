@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(243, 243, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(143, 141, 141,0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .subheading {
+    color: grey;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .input-container {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid rgb(197, 196, 196);
+    border-radius: 5px;
+  }
+
+  .country-code {
+    padding: 10px;
+    border: none;
+    border-right: 1px solid rgb(211, 210, 210);
+    background: rgb(241, 241, 241);
+    width: 20%;
+    text-align: center;
+  }
+
+  .phone-input {
+    padding: 10px;
+    border: none;
+    flex: 1;
+  }
+
+  .phone-input:focus {
+    outline: none;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button {
+    padding: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    flex: 1;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .button:hover {
+    background-color: red;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      width: 300px;
+    }
+  }
