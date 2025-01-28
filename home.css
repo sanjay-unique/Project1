@@ -201,6 +201,23 @@
   .footer a:hover {
     text-decoration: underline;
   }
+  .delete-event {
+    margin-top: 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .delete-event.show {
+    display: inline-block;
+  }
+
+  .delete-event:hover {
+    background-color: #ff1a1a;
+  }
   @media (min-width: 768px) {
     .content {
       max-width: 1200px;
