@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="icon.png">
+  <title>SAS Event Host</title>
+</head>
+<style>
+    .form-container {
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form-container input, .form-container textarea, .form-container button {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .form-container button {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-container button:hover {
+      background-color: #0056b3;
+    }
+</style>
+<body>
+    <div class="form-container">
+        <h3>Host Your Event</h3>
+        <form id="event-form">
+          <input type="text" id="event-name" placeholder="Event Name" required>
+          <input type="text" id="event-date" placeholder="dd/mm/yyyy" required>
+          <input type="url" id="event-image" placeholder="Event Image URL" required>
+          <textarea id="event-description" placeholder="Event Description" rows="1" required></textarea>
+          <button type="submit">Submit Event</button>
+        </form>
+      </div>
+
+      <script>
+  
+      function saveEvent(event) {
+        const events = JSON.parse(localStorage.getItem('events')) || [];
+        events.push(event);
+        localStorage.setItem('events', JSON.stringify(events));
+      }
+  
+      document.getElementById('event-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('event-name').value;
+        const date = document.getElementById('event-date').value;
+        const image = document.getElementById('event-image').value;
+        const description = document.getElementById('event-description').value;
+
+        const newEvent = { name, date, image, description};
+        saveEvent(newEvent);
+        
+        window.location.href='index.html'
+      });
+    </script>
+
+</body>
+</html>
