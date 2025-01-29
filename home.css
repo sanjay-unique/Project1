@@ -105,7 +105,8 @@
     margin-right: 20px;
   }
 
-  .auth-options a {
+  .auth-options button {
+    border: none;
     text-decoration: none;
     color:white;
     font-size: 15px;
@@ -115,7 +116,7 @@
     transition: background-color 0.3s, color 0.3s;
   }
 
-  .auth-options a:hover {
+  .auth-options button:hover {
     background-color: red;
     color: white;
   }
